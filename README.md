@@ -64,8 +64,6 @@ VNC登陆默认端口号是：5901
 <br />
 <br />
 <pre><code>export DISPLAY=localhost:1</code></pre>
-<br />
-<br />
 <pre><code>firefox --profile ~/.alexa/alexa --new-tab 'https://www.alexamaster.net/Master/102724' &</code></pre>
 <br />
 <br />
