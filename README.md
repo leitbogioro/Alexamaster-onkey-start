@@ -54,7 +54,7 @@
 - Once download and run it, you only need to input your alexamaster url instead of other operations；
 <br />
 
-- Check whether firefox process is running every 2 minutes, if it have been killed, this shell will wake it up automatically。
+- Check whether firefox process is running every 2 minutes, if it have been killed, this shell will wake it up automatically.
 <br />
 <br />
 <br />
