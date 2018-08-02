@@ -78,6 +78,7 @@ VNC连接默认端口号是：5901
 <br />
 <pre><code>tightvncserver :1</code></pre>
 <br />
+<br />
 <b>1.4</b> 手动启动firefox挂机（使用我的脚本后不必再用此命令操作）：
 <br />
 <br />
