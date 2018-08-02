@@ -34,7 +34,6 @@
 <br />
 
 - 运行平台判断，仅适用于Ubuntu 16.04（由狗仔小分队大佬的脚本决定），其他系统不予支持，否则自动退出；
-<br />
 - Can only used on Ubuntu Xenial, doesn't support other system.
 <br />
 
