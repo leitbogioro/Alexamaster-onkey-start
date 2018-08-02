@@ -31,19 +31,19 @@
 <b>1. 如果还没有部署VNC+firefox，请先下载：</b>
 <br />
 <br />
-<code>wget xiaofd.github.io/vncam.sh</code>
+<pre><code>wget xiaofd.github.io/vncam.sh</code></pre>
 <br />
 <br />
 <b>1.1</b> 运行：
 <br />
 <br />
-<code>bash vncam.sh -p 'xiaofd.github.io/others/passwd-d10086' -u 'https://www.alexamaster.net/Master/102724'</code>
+<pre><code>bash vncam.sh -p 'xiaofd.github.io/others/passwd-d10086' -u 'https://www.alexamaster.net/Master/102724'</code></pre>
 <br />
 <br />
 <b>1.2</b> “passwd-”后面的“d10086”是VNC连接的默认密码，安装完毕后，可输入：
 <br />
 <br />
-<code>vncpasswd</code>
+<pre><code>vncpasswd</code></pre>
 <br />
 <br />
 直接修改VNC登录密码
@@ -61,22 +61,22 @@ VNC登陆默认端口号是：5901
 <b>1.4</b> 手动启动firefox挂机（使用我的脚本后不必再用此命令操作）：
 <br />
 <br />
-<code>export DISPLAY=localhost:1</code>
+<pre><code>export DISPLAY=localhost:1</code></pre>
 <br />
 <br />
-<code>firefox --profile ~/.alexa/alexa --new-tab 'https://www.alexamaster.net/Master/102724' &</code>
+<pre><code>firefox --profile ~/.alexa/alexa --new-tab 'https://www.alexamaster.net/Master/102724' &</code></pre>
 <br />
 <br />
 <br />
 <b>2. 使用此脚本驻入系统服务，开启自动挂机：</b>
 <br />
 <br />
-<code>wget alexamaster.sh https://git.io/fNKQt && chmod +x alexamaster.sh && bash ./alexamaster.sh</code>
+<pre><code>wget --no-check-certificate -O alexamaster.sh https://git.io/fNKQt && chmod +x alexamaster.sh && bash ./alexamaster.sh</code></pre>
 <br />
 <br />
 <b>2.1</b> 如何卸载该服务？
 <br />
 <br />
-<code>rm -rf alexamaster.sh runalexamaster.sh</code>
+<pre><code>rm -rf alexamaster.sh runalexamaster.sh</code></pre>
 <br />
 <br />
