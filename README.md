@@ -107,9 +107,15 @@ VNC连接默认端口号是：5901
 <pre><code>wget --no-check-certificate -O alexamaster.sh https://git.io/fNKQt && chmod +x alexamaster.sh && bash ./alexamaster.sh</code></pre>
 <br />
 <br />
-<b>2.1</b> 如何卸载该服务？
+<b>2.1</b> 如何修改url？
 <br />
 <br />
-<pre><code>rm -rf alexamaster.sh runalexamaster.sh</code></pre>
+<pre><code>bash /root/runalexamaster.sh</code></pre>
+<br />
+<br />
+<b>2.2</b> 如何卸载该服务？
+<br />
+<br />
+<pre><code>rm -rf /root/alexamaster.sh /root/runalexamaster.sh</code></pre>
 <br />
 <br />
