@@ -67,7 +67,6 @@ VNC登陆默认端口号是：5901
 <pre><code>firefox --profile ~/.alexa/alexa --new-tab 'https://www.alexamaster.net/Master/102724' &</code></pre>
 <br />
 <br />
-<br />
 <b>2. 使用此脚本驻入系统服务，开启自动挂机：</b>
 <br />
 <br />
