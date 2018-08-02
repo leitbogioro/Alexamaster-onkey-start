@@ -47,8 +47,8 @@
 <br />
 <pre><code>vncpasswd</code></pre>
 <br />
-<br />
 直接修改VNC登录密码
+<br />
 <br />
 <br />
 VNC登陆默认端口号是：5901
