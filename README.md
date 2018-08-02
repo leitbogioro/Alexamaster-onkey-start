@@ -34,14 +34,14 @@
 <code>wget xiaofd.github.io/vncam.sh</code>
 <br />
 <br />
-运行：
-<code>bash vncam.sh -p 'xiaofd.github.io/others/passwd-d10086' -u 'https://www.alexamaster.net/Master/XXXXX'</code>
+  1.1 运行：
+  <code>bash vncam.sh -p 'xiaofd.github.io/others/passwd-d10086' -u 'https://www.alexamaster.net/Master/XXXXX'</code>
 <br />
 <br />
-注：“passwd-”后面的“d10086”是VNC连接的默认密码，安装完毕后，可输入：
+  注：“passwd-”后面的“d10086”是VNC连接的默认密码，安装完毕后，可输入：
 <br />
 <br />
-<code>vncpasswd</code>
+  <code>vncpasswd</code>
 <br />
 <br />
 直接修改VNC登录密码
