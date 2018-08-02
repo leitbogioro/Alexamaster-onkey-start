@@ -40,7 +40,7 @@
 <code>bash vncam.sh -p 'xiaofd.github.io/others/passwd-d10086' -u 'https://www.alexamaster.net/Master/102724'</code>
 <br />
 <br />
-<b>1.2</b>“passwd-”后面的“d10086”是VNC连接的默认密码，安装完毕后，可输入：
+<b>1.2</b> “passwd-”后面的“d10086”是VNC连接的默认密码，安装完毕后，可输入：
 <br />
 <br />
 <code>vncpasswd</code>
@@ -52,13 +52,13 @@
 VNC登陆默认端口号是：5901
 <br />
 <br />
-<b>1.3</b>启动vnc桌面：
+<b>1.3</b> 启动vnc桌面：
 <br />
 <br />
 <code>tightvncserver :1</code>
 <br />
 <br />
-<b>1.4</b>手动启动firefox挂机（使用我的脚本后不必再用此命令操作）：
+<b>1.4</b> 手动启动firefox挂机（使用我的脚本后不必再用此命令操作）：
 <br />
 <br />
 <code>export DISPLAY=localhost:1</code>
