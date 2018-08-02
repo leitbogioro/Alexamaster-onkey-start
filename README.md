@@ -1,5 +1,5 @@
-# Aleaxmaster 一键启动脚本使用指南
-# Aleaxmaster onkey start user guide
+# Alexamaster 一键启动脚本使用指南
+# Alexamaster onkey start user guide
 <br />
 <br />
 
