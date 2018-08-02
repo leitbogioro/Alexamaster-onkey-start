@@ -65,6 +65,7 @@
 <br />
 <b>1. 如果还没有部署VNC+firefox，请先下载：</b>
 <br />
+<br />
 If you didn't deploy VNC and firefox, you should download it before.
 <br />
 <br />
@@ -72,6 +73,7 @@ If you didn't deploy VNC and firefox, you should download it before.
 <br />
 <br />
 <b>1.1</b> 运行：
+<br />
 <br />
 Execute it:
 <br />
@@ -81,17 +83,20 @@ Execute it:
 <br />
 <b>1.2</b> “passwd-”后面的“d10086”是VNC连接的默认密码，安装完毕后，可输入：
 <br />
+<br />
 The "d10086" after "passwd-" is default VNC connection password, you can input following command when finished installation
 <br />
 <br />
 <pre><code>vncpasswd</code></pre>
 直接修改VNC登录密码
 <br />
+<br />
 Modify VNC login password
 <br />
 <br />
 <br />
 VNC连接默认端口号是：5901
+<br />
 <br />
 The default port of VNC is 5901
 <br />
@@ -100,6 +105,7 @@ The default port of VNC is 5901
 <br />
 <b>1.3</b> 启动vnc桌面：
 <br />
+<br />
 Switch on VNC desktop:
 <br />
 <br />
@@ -107,6 +113,7 @@ Switch on VNC desktop:
 <br />
 <br />
 <b>1.4</b> 手动启动firefox挂机（使用我的脚本后不必再用此命令操作）：
+<br />
 <br />
 Start manually to hang up(if you use my shell, don't execute these following two commands):
 <br />
@@ -117,6 +124,7 @@ Start manually to hang up(if you use my shell, don't execute these following two
 <br />
 <b>2. 使用此脚本驻入系统服务，开启自动挂机：</b>
 <br />
+<br />
 Download shell and run it!
 <br />
 <br />
@@ -125,13 +133,17 @@ Download shell and run it!
 <br />
 <b>2.1</b> 如何修改alexamaster挂机url？
 <br />
-How to modify a new Alexamaster url?
+<br />
+How to change a new Alexamaster url?
 <br />
 <br />
 <pre><code>bash /root/runalexamaster.sh</code></pre>
 <br />
 <br />
 <b>2.2</b> 如何卸载该服务？
+<br />
+<br />
+How to uninstall it?
 <br />
 <br />
 <pre><code>rm -rf /root/alexamaster.sh /root/runalexamaster.sh</code></pre>
