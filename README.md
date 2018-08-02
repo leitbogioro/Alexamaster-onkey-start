@@ -71,7 +71,7 @@ VNC登陆默认端口号是：5901
 <b>2. 使用此脚本驻入系统服务，开启自动挂机：</b>
 <br />
 <br />
-<code>wget https://git.io/fNKQt && chmod +x alexamaster.sh && bash alexamaster.sh</code>
+<code>wget --no-check-certificate -O alexamaster.sh https://git.io/fNKQt && chmod +x alexamaster.sh && bash ./alexamaster.sh</code>
 <br />
 <br />
 <b>2.1</b> 如何卸载该服务？
