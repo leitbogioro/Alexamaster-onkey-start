@@ -112,10 +112,10 @@ Switch on VNC desktop:
 <pre><code>tightvncserver :1</code></pre>
 <br />
 <br />
-<b>1.4</b> 手动启动firefox挂机（使用我的脚本后不必再用此命令操作）：
+<b>1.4</b> 手动启动firefox挂机（<b>使用我的脚本后不必再用此命令操作</b>）：
 <br />
 <br />
-Start manually to hang up(if you use my shell, don't execute these following two commands):
+Start manually to hang up during system running(<b>if you use my shell, don't execute these following two commands</b>):
 <br />
 <br />
 <pre><code>export DISPLAY=localhost:1</code></pre>
@@ -125,13 +125,13 @@ Start manually to hang up(if you use my shell, don't execute these following two
 <b>2. 使用此脚本驻入系统服务，开启自动挂机：</b>
 <br />
 <br />
-Download shell and run it!
+Download shell and run it to keep hanging!
 <br />
 <br />
 <pre><code>wget --no-check-certificate -O alexamaster.sh https://git.io/fNKQt && chmod +x alexamaster.sh && bash ./alexamaster.sh</code></pre>
 <br />
 <br />
-<b>2.1</b> 如何修改alexamaster挂机url？
+<b>2.1</b> 如何修改Alexamaster挂机url？
 <br />
 <br />
 How to change a new Alexamaster url?
