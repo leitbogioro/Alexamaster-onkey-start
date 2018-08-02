@@ -28,6 +28,8 @@
 
 ## 使用方法
 ## How to use
+<br />
+<br />
 <b>1. 如果还没有部署VNC+firefox，请先下载：</b>
 <br />
 <br />
@@ -52,10 +54,12 @@
 VNC登陆默认端口号是：5901
 <br />
 <br />
+<br />
+<br />
 <b>1.3</b> 启动vnc桌面：
 <br />
 <br />
-<code>tightvncserver :1</code>
+<pre><code>tightvncserver :1</code></pre>
 <br />
 <br />
 <b>1.4</b> 手动启动firefox挂机（使用我的脚本后不必再用此命令操作）：
