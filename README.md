@@ -35,9 +35,9 @@
 <br />
 <br />
 1.1 运行：
+<br />
+<br />
 <code>bash vncam.sh -p 'xiaofd.github.io/others/passwd-d10086' -u 'https://www.alexamaster.net/Master/102724'</code>
-<br />
-<br />
 <br />
 <br />
 注：“passwd-”后面的“d10086”是VNC连接的默认密码，安装完毕后，可输入：
