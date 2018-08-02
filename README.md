@@ -32,7 +32,7 @@
 <br />
 <br />
 
-- 运行平台判断，仅适用于Ubuntu 16.04（由狗仔小分队大佬的脚本决定），其他系统不予支持，否则自动退出；
+- 运行平台判断，<b>仅适用于Ubuntu 16.04</b>（由狗仔小分队大佬的脚本决定），其他系统不予支持，否则自动退出；
 
 <br />
 
@@ -48,7 +48,7 @@
 <br />
 <br />
 
-- Can only used by Ubuntu Xenial, doesn't support other system.；
+- Can only used by <b>Ubuntu Xenial</b>(determined by xiaofd.win's original shell), doesn't support other system.；
 <br />
 
 - Once download and run it, you only need to input your alexamaster url instead of other operations；
