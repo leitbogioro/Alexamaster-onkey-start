@@ -28,7 +28,7 @@
 
 ## 使用方法
 ## How to use
-1. 如果还没有部署VNC+firefox，请先下载：
+1.如果还没有部署VNC+firefox，请先下载：
 <br />
 <br />
 <code>wget xiaofd.github.io/vncam.sh</code>
