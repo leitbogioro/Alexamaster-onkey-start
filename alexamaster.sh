@@ -47,9 +47,15 @@ if [ \$ffPID_Num -eq 0 ]; then
 fi
 EOF
 
-# 判断计划任务是否开启，避免多次运行添加多条
+# 开启 VNC 服务器连接
 
 tightvncserver :1
+
+# 设置中国时区，用于安排服务器在凌晨每天重启一次
+
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+# 判断计划任务是否开启，避免多次运行添加多条
 
 	if grep -Eqi "runalexamaster" /etc/crontab; then
 	echo "Scheduled task has been opened"
