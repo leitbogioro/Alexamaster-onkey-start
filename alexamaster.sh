@@ -49,6 +49,8 @@ EOF
 
 # 判断计划任务是否开启，避免多次运行添加多条
 
+tightvncserver :1
+
 	if grep -Eqi "runalexamaster" /etc/crontab; then
 	echo "Scheduled task has been opened"
 else
