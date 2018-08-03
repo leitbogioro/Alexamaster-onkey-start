@@ -103,10 +103,10 @@ The default port of VNC is 5901
 <br />
 <br />
 <br />
-<b>1.3</b> 启动vnc桌面：
+<b>1.3</b> 启动vnc桌面（<b>使用我的脚本后不必再用此命令操作</b>）：
 <br />
 <br />
-Switch on VNC desktop:
+Switch on VNC desktop(<b>if you use my shell, don't execute these following two commands</b>):
 <br />
 <br />
 <pre><code>tightvncserver :1</code></pre>
