@@ -14,7 +14,7 @@ read -p "alexaMaster url(Default url is belong to molly):" alexaurl
 
 expr ${alexaurl} + 1 &>/dev/null
 
-# 将以下脚本文件写入root根目录
+# 将自动运行alexamaster的脚本文件写入root根目录
 
 cat > /root/runalexamaster.sh<<-EOF
 #!/bin/bash
@@ -122,7 +122,7 @@ echo "timezone = ${selecttimezone}"
 
 ln -sf $systemtimezone $zoneconfdir
 
-# 设置swap
+# swap优化
 
 fallocate -l 1.5G /swapfile
 chmod 600 /swapfile
