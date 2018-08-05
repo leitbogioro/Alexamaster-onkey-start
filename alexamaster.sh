@@ -51,9 +51,84 @@ EOF
 
 tightvncserver :1
 
-# 设置中国时区，用于安排服务器在凌晨每天重启一次
+# 设置时区，用于安排服务器在凌晨每天重启一次
 
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+zonefiledir=/usr/share/zoneinfo/
+zoneconfdir=/etc/localtime
+
+Shanghai=$zonefiledir"Asia/Shanghai"
+Tokyo=$zonefiledir"Asia/Tokyo"
+Kolkata=$zonefiledir"Asia/Kolkata"
+Sydney=$zonefiledir"Australia/Sydney"
+LosAngeles=$zonefiledir"America/Los_Angeles"
+NewYork=$zonefiledir"America/New_York"
+Chicago=$zonefiledir"America/Chicago"
+Phoenix=$zonefiledir"America/Phoenix"
+London=$zonefiledir"Europe/London"
+Rome=$zonefiledir"Europe/Rome"
+Moscow=$zonefiledir"Europe/Moscow"
+
+tzconfig=(
+	$Shanghai
+	$Tokyo
+	$Kolkata
+	$Sydney
+	$LosAngeles
+	$NewYork
+	$Chicago
+	$Phoenix
+	$London
+	$Rome
+	$Moscow
+)
+
+timezone=(
+	Shanghai
+	Tokyo
+	Kolkata
+	Sydney
+	LosAngeles
+	NewYork
+	Chicago
+	Phoenix
+	London
+	Rome
+	Moscow
+)
+
+echo -e "Please select your timezone:"
+for ((i=1;i<=${#tzconfig[@]};i++ )); do
+        hint="${timezone[$i-1]}"
+        echo -e "${i} ${hint}"
+done
+
+read -p "Which timezone you want to select(Default: Shanghai):" pick
+[ -z "$pick" ] && pick=1
+expr ${pick} + 1 &>/dev/null
+if [ $? -ne 0 ]; then
+    echo -e "Input error, please input a number"
+    continue
+fi
+if [[ "$pick" -lt 1 || "$pick" -gt ${#tzconfig[@]} ]]; then
+    echo -e "Input error, please input a number between 1 and ${#timezone[@]}"
+    continue
+fi
+
+systemtimezone=${tzconfig[$pick-1]}
+
+selecttimezone=${timezone[$pick-1]}
+
+echo "timezone = ${selecttimezone}"
+
+ln -sf $systemtimezone $zoneconfdir
+
+# 设置swap
+
+fallocate -l 1.5G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo '/swapfile none swap sw 0 0' >> /etc/fstab
 
 # 判断计划任务是否开启，避免多次运行添加多条
 
