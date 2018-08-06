@@ -158,3 +158,5 @@ else
 else
 echo "Your system doesn't support alexaMaster fast start!(Can only run with Ubuntu 16.04)"
 fi
+
+vncpasswd
