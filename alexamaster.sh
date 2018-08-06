@@ -32,7 +32,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 
 ffproc_start(){
 	export DISPLAY=localhost:1
-	firefox --profile ~/.alexa/alexa --new-tab '\${alexaurl}' &
+	firefox --profile ~/.alexa/alexa --new-tab '${alexaurl}' &
 }
 
 ffproc_char="/usr/lib/firefox/firefox" # 定义 firefox 进程关键字
