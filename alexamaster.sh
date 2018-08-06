@@ -30,10 +30,15 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 # Description:       starts autorunfirefox.sh using start-stop-daemon
 ### END INIT INFO
 
-ffproc_name="/usr/lib/firefox/firefox" # 定义 firefox 进程名称
+ffproc_start(){
+	export DISPLAY=localhost:1
+	firefox --profile ~/.alexa/alexa --new-tab '\${alexaurl}' &
+}
+
+ffproc_char="/usr/lib/firefox/firefox" # 定义 firefox 进程关键字
 
 ffproc_num(){ # 检查进程数量
-        ffPID_Num=\`ps -ef | grep \$ffproc_name | grep -v grep | wc -l\`
+        ffPID_Num=\`ps -ef | grep \$ffproc_char | grep -v grep | wc -l\`
         return \$ffPID_Num
 }
 
@@ -41,10 +46,21 @@ ffproc_num # 执行检查进程数
 
 ffPID_Num=\$? # 获取进程数量
 
-if [ \$ffPID_Num -eq 0 ]; then     
-        export DISPLAY=localhost:1
-        firefox --profile ~/.alexa/alexa --new-tab '${alexaurl}' &
+ffproc_idle=\`top -b -n 1 | grep firefox | awk '{print $9}' | cut -f 1 -d "."\` # 检查 firefox 的CPU利用率
+
+# 执行进程检查
+
+if [ \$ffPID_Num -eq 0 ]; then # 如果 firefox 的进程数为0（崩溃），则重新启动
+	ffproc_start
 fi
+
+# 如果遇到需要点击弹出窗口无后续操作，firefox进程的CPU占用为0，则将进程杀掉并重新启动
+
+if ((\$ffproc_idle == 0 )); then
+	pkill firefox
+	ffproc_start
+fi
+
 EOF
 
 # 开启 VNC 服务器连接
