@@ -143,11 +143,11 @@ ln -sf $systemtimezone $zoneconfdir
 if grep -Eqi "/swapfile none swap sw 0 0" /etc/fstab; then
 	echo "Memory has been optimized"
 else
-fallocate -l 1.5G /swapfile
-chmod 600 /swapfile
-mkswap /swapfile
-swapon /swapfile
-echo '/swapfile none swap sw 0 0' >> /etc/fstab
+	fallocate -l 1.5G /swapfile
+	chmod 600 /swapfile
+	mkswap /swapfile
+	swapon /swapfile
+	echo '/swapfile none swap sw 0 0' >> /etc/fstab
 fi
 
 # 判断计划任务是否开启，避免多次运行添加多条
