@@ -148,6 +148,7 @@ else
 	mkswap /swapfile
 	swapon /swapfile
 	echo '/swapfile none swap sw 0 0' >> /etc/fstab
+	echo "Memory has been optimized"
 fi
 
 # 判断计划任务是否开启，避免多次运行添加多条
