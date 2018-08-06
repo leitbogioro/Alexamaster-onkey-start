@@ -46,7 +46,7 @@ ffproc_num # 执行检查进程数
 
 ffPID_Num=\$? # 获取进程数量
 
-ffproc_idle=\`top -b -n 1 | grep firefox | awk '{print $9}' | cut -f 1 -d "."\` # 检查 firefox 的CPU利用率
+ffproc_idle=\`top -b -n 1 | grep firefox | awk '{print \$9}' | cut -f 1 -d "."\` # 检查 firefox 的CPU利用率
 
 # 执行进程检查
 
