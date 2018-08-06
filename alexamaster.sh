@@ -152,12 +152,12 @@ fi
 
 # 判断计划任务是否开启，避免多次运行添加多条
 
-	if grep -Eqi "runalexamaster" /etc/crontab; then
+if grep -Eqi "runalexamaster" /etc/crontab; then
 	echo "Scheduled task has been opened"
 else
 	echo '*/2 * * * * root bash /root/runalexamaster.sh >/dev/null 2>&1' >> /etc/crontab
 	echo '47 3 * * * root /sbin/reboot >/dev/null 2>&1' >> /etc/crontab
-	fi
+fi
 
 else
 echo "Your system doesn't support alexaMaster fast start!(Can only run with Ubuntu 16.04)"
