@@ -140,16 +140,50 @@ ln -sf $systemtimezone $zoneconfdir
 
 # 判断是否需要 swap 优化
 
-if grep -Eqi "/swapfile none swap sw 0 0" /etc/fstab; then
-	echo "Memory has been optimized"
-else
-	fallocate -l 1.5G /swapfile
-	chmod 600 /swapfile
-	mkswap /swapfile
-	swapon /swapfile
-	echo '/swapfile none swap sw 0 0' >> /etc/fstab
-	echo "Memory has been optimized"
-fi
+mem_total=`free -m | grep 'Mem' | awk '{print $2}'`
+
+swap_total=`free -m | grep 'Swap' | awk '{print $2}'`
+
+mem_capacity(){
+        if [ $mem_total -le 400 ] && [ $swap_total -le 200 ]; then
+                memsize="1"
+                return
+        fi
+        if [ $mem_total -ge 490 ] && [ $mem_total -le 900 ] && [ $swap_total -le 300 ]; then
+                memsize="1.5"
+                return
+        fi
+        if [ $mem_total -ge 900 ] && [ $mem_total -le 1850 ] && [ $swap_total -le 500 ]; then
+                memsize="2"
+                return
+        fi
+        if [ $mem_total -ge 1850 ] && [ $mem_total -le 3800 ] && [ $swap_total -le 900 ]; then
+                memsize="4"
+                return
+        fi
+        if [ $mem_total -ge 3800 ] && [ $swap_total -le 1500 ]; then
+                memsize="6"
+                return
+        fi
+}
+
+mem_capacity
+
+mem_opimize(){
+		if grep -Eqi "/swapfile none swap sw 0 0" /etc/fstab || [ ! -n "$memsize" ]; then
+				echo "Memory has been optimized(code: u)"
+		else
+				getmemsize="$memsize""G"
+				fallocate -l $getmemsize /swapfile
+				chmod 600 /swapfile
+				mkswap /swapfile
+				swapon /swapfile
+				echo '/swapfile none swap sw 0 0' >> /etc/fstab
+				echo "Memory has been optimized(code: w)"
+		fi
+}
+
+mem_opimize
 
 # 判断计划任务是否开启，避免多次运行添加多条
 
@@ -160,8 +194,15 @@ else
 	echo '47 3 * * * root /sbin/reboot >/dev/null 2>&1' >> /etc/crontab
 fi
 
+# 设置vnc密码
+
+read -n1 -p  "Would you like to set a new VNC passwd(y/n)?" ans
+if [[ ${ans} =~ [yY] ]]; then
+        echo -e "\n"
+        vncpasswd
+fi
+echo -e "\n"
+
 else
 echo "Your system doesn't support alexaMaster fast start!(Can only run with Ubuntu 16.04)"
 fi
-
-vncpasswd
