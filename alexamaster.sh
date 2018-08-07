@@ -141,7 +141,6 @@ ln -sf $systemtimezone $zoneconfdir
 # 判断是否需要 swap 优化
 
 mem_total=`free -m | grep 'Mem' | awk '{print $2}'`
-
 swap_total=`free -m | grep 'Swap' | awk '{print $2}'`
 
 mem_capacity(){
@@ -166,7 +165,6 @@ mem_capacity(){
                 return
         fi
 }
-
 mem_capacity
 
 mem_opimize(){
@@ -182,7 +180,6 @@ mem_opimize(){
 				echo "Memory has been optimized(code: w)"
 		fi
 }
-
 mem_opimize
 
 # 判断计划任务是否开启，避免多次运行添加多条
