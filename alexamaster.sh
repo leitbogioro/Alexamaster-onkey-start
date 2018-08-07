@@ -189,6 +189,7 @@ if grep -Eqi "runalexamaster" /etc/crontab; then
 else
 	echo '*/2 * * * * root bash /root/runalexamaster.sh >/dev/null 2>&1' >> /etc/crontab
 	echo '47 3 * * * root /sbin/reboot >/dev/null 2>&1' >> /etc/crontab
+	echo "Scheduled task has been opened"
 fi
 
 # 设置vnc密码
