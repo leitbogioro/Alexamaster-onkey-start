@@ -168,16 +168,16 @@ mem_capacity(){
 mem_capacity
 
 mem_opimize(){
-		if grep -Eqi "/swapfile none swap sw 0 0" /etc/fstab || [ ! -n "$memsize" ]; then
-				echo "Memory has been optimized(code: u)"
+	if grep -Eqi "/swapfile none swap sw 0 0" /etc/fstab || [ ! -n "$memsize" ]; then
+		echo "Memory has been optimized(code: u)"
 		else
-				getmemsize="$memsize""G"
-				fallocate -l $getmemsize /swapfile
-				chmod 600 /swapfile
-				mkswap /swapfile
-				swapon /swapfile
-				echo '/swapfile none swap sw 0 0' >> /etc/fstab
-				echo "Memory has been optimized(code: w)"
+			getmemsize="$memsize""G"
+			fallocate -l $getmemsize /swapfile
+			chmod 600 /swapfile
+			mkswap /swapfile
+			swapon /swapfile
+			echo '/swapfile none swap sw 0 0' >> /etc/fstab
+			echo "Memory has been optimized(code: w)"
 		fi
 }
 mem_opimize
