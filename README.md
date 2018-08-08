@@ -81,10 +81,10 @@ Download shell and run it to keep hanging!
 <pre><code>wget --no-check-certificate -O alexamaster.sh https://git.io/fNKQt && chmod +x alexamaster.sh && bash ./alexamaster.sh</code></pre>
 <br />
 <br />
-<b>2.1</b> 如何修改Alexamaster挂机url？
+<b>2.1</b> 如何重新修改Alexamaster挂机程序配置？
 <br />
 <br />
-How to change a new Alexamaster url?
+How to change a new Alexamaster hanging up config?
 <br />
 <br />
 <pre><code>bash /root/runalexamaster.sh</code></pre>
