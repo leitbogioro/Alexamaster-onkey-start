@@ -184,11 +184,12 @@ mem_opimize
 
 # 判断计划任务是否开启，避免多次运行添加多条
 
-if grep -Eqi "runalexamaster" /etc/crontab; then
+if grep -Eqi "runalexamaster" /etc/crontab && grep -Eqi "pkill firefox" /etc/crontab; then
 	echo "Scheduled task has been opened"
 else
 	echo '*/2 * * * * root bash /root/runalexamaster.sh >/dev/null 2>&1' >> /etc/crontab
 	echo '47 3 * * * root /sbin/reboot >/dev/null 2>&1' >> /etc/crontab
+	echo '0 */1 * * *' root pkill firefox >/dev/null 2>&1' >> /etc/crontab
 	echo "Scheduled task has been opened"
 fi
 
