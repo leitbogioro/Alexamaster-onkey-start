@@ -63,22 +63,13 @@
 ## How to use
 <br />
 <br />
-<b>1. 如果还没有部署VNC+firefox，请先下载：</b>
+<b>1. 如果还没有部署VNC+firefox，请先下载并运行：</b>
 <br />
 <br />
-If you didn't deploy VNC and firefox, you should download it before.
+If you didn't deploy VNC and firefox, you should download and execute it before.
 <br />
 <br />
-<pre><code>wget xiaofd.github.io/vncam.sh</code></pre>
-<br />
-<br />
-<b>1.1</b> 运行：
-<br />
-<br />
-Execute it:
-<br />
-<br />
-<pre><code>bash vncam.sh -p 'xiaofd.github.io/others/passwd-d10086' -u 'https://www.alexamaster.net/Master/102724'</code></pre>
+<pre><code>wget xiaofd.github.io/vncam.sh && bash vncam.sh -p 'xiaofd.github.io/others/passwd-d10086' -u 'https://www.alexamaster.net/Master/102724'</code></pre>
 <br />
 <br />
 <b>1.2</b> “passwd-”后面的“d10086”是VNC连接的默认密码，安装完毕后，可输入：
