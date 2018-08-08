@@ -63,7 +63,7 @@
 ## How to use
 <br />
 <br />
-<b>1. 如果还没有部署VNC+firefox，请先下载并运行：</b>
+<b>1.1 如果还没有部署VNC+firefox，请先下载并运行：</b>
 <br />
 <br />
 If you didn't deploy VNC and firefox, you should download and execute it before.
